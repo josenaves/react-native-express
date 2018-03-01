@@ -31,14 +31,14 @@ export default class extends Component {
       <div style={styles.container}>
         {previousSection ? (
           <Link to={previousSection.slug} style={styles.item}>
-            Previous - {previousSection.title}
+            Anterior - {previousSection.title}
           </Link>
         ) : (
           <div />
         )}
         {nextSection && (
           <Link to={nextSection.slug} style={styles.nextItem}>
-            Next - {nextSection.title}
+            Próximo - {nextSection.title}
           </Link>
         )}
       </div>
