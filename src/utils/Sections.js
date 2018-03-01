@@ -1,7 +1,7 @@
 
 
 let sections = [
-  {depth: 0, title: 'Environment', slug: 'environment', componentName: 'Environment'},
+  {depth: 0, title: 'Ambiente', slug: 'environment', componentName: 'Environment'},
   {depth: 1, title: 'Quick Start', slug: 'quick_start', componentName: 'QuickStart'},
 
   {depth: 0, title: 'Modern JavaScript', slug: 'modern_javascript', componentName: 'ModernJavascript'},
