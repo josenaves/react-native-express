@@ -15,7 +15,7 @@ export default class Author extends Component {
 
     return (
       <div style={styles.author}>
-        By <a href={url}>{children}</a>
+        Por <a href={url}>{children}</a>
       </div>
     )
   }
