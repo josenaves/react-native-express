@@ -2,9 +2,9 @@
 
 let sections = [
   {depth: 0, title: 'Ambiente', slug: 'environment', componentName: 'Environment'},
-  {depth: 1, title: 'Quick Start', slug: 'quick_start', componentName: 'QuickStart'},
+  {depth: 1, title: 'Início Rápido', slug: 'quick_start', componentName: 'QuickStart'},
 
-  {depth: 0, title: 'Modern JavaScript', slug: 'modern_javascript', componentName: 'ModernJavascript'},
+  {depth: 0, title: 'JavaScript Moderno', slug: 'modern_javascript', componentName: 'ModernJavascript'},
   {depth: 1, title: 'ES6', slug: 'es6', componentName: 'ES6'},
 
   {depth: 2, title: 'Block Scoped Declarations', slug: 'block_scoped_declarations', componentName: 'BlockScopedDeclarations'},
