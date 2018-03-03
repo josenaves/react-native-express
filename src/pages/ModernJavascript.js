@@ -5,19 +5,19 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-In the old days, you could just include a \`${'<script>'}\` tag in the header of your webpage, and your JavaScript would run as intended. These days, we *preprocess* our JavaScript in order to access experimental features and language extensions like JSX.
+Nos velhos tempos, você apenas incluia uma tag \`${'<script>'}\` no header da página e seu JavaScript seria executado. Nos dias de hoje, nós *pre-processamos* nosso JavaScript para que possamos acessar features experimentais e extensões da linguagem como JSX.
 
 # Babel
 
-Babel is the main tool used to preprocess JavaScript. Babel is a highly configurable compiler that lets you use experimental features and extensions, compiling down into old-style JavaScript that can be supported on a wider range of platforms. Of course, if a native platform doesn't support an ES6 feature like \`Promise()\`, Babel won't fully be able to help -- but it can in many cases polyfill missing APIs to provide this functionality.
+Babel é a ferramenta principal utilizada para pré-processar JavaScript. Babel é um compilador altamente configurável que te deixa usar features experimentais e extensões, compilando tudo para JavaScript antigo que é suportado num número maior de plataformas. É claro que, se uma plataforma não suportar nativamente uma feature ES6 como \`Promise()\`, Babel não poderá ajudar -- mas em muitos casos ela pode usar um polyfill para suportar a API.
 
-Babel enables debugging of the the original source code by including **source maps** with the compiled JavaScript. JavaScript interpreters will run the compiled code, but map it to the source code in the debugger so that you can debug the source code instead of the (generally quite ugly) compiled output.
+Babel suporta o debug do código fonte original por incluir **mapas de fontes** com o JavaScript compilado. Interpretadores JavaScript executarão o código compilado e o mapearão para o código fonte no debugger para que você possa debugar o código fonte ao invés do código compilado (geralmente bem feio).
 
-# Babel Configuration
+# Configuração do Babel
 
-You can configure Babel by including a \`.babelrc\` file in the root directory of your project. This file can specify which experimental JS features to enable and which plugins to use (JSX).
+Você pode configurar o Babel incluíndo um arquivo \`.babelrc\` na diretório raiz do seu projeto. Este arquivo pode especificar quais features experimentais do JavaScript serão habilitadas e quais plugins serão usados (JSX).
 
-React Native takes care of properly configuring babel for you, so you generally won't need to create a \`.babelrc\`. However, if you want to modify the default presets, you can use the npm package [babel-preset-react-native](https://github.com/facebook/react-native/tree/master/babel-preset) as a base configuration, and apply additional plugins/configuration on top.
+React Native toma o cuidado de configurar o Babel para você, então geralmente você não precisará criar um arquivo \`.babelrc\`. Entretanto, se você quer modificar a configuração default, você pode usar o pacote npm [babel-preset-react-native](https://github.com/facebook/react-native/tree/master/babel-preset) como uma configuração base e aplicar plugins/configurações em cima.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>
