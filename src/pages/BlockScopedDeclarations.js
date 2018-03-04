@@ -8,7 +8,7 @@ import { EditorTranspiler } from '../components'
 const code = `const a = 1
 let b = 'foo'
 
-// Not allowed!
+// Não permitido !
 // a = 2
 
 // Ok!
@@ -19,16 +19,16 @@ if (true) {
 }`
 
 const content = markdown(markdownOptions)`
-Instead of using \`var\` to declare local variables, we use \`const\` and \`let\`. The main difference is that \`var\` is scoped to a function, while \`const\` and \`let\` are scoped to a block.
+Ao invés de usar \`var\` para declarar variáveis locais, usamos  \`const\` e \`let\`. A principal diferença é que \`var\` tem escopo de função, enquanto  \`const\` e \`let\` tem escopo de bloco.
 
-Additionally, variables declared with \`const\` can only be assigned a value once. Assigning another value to the same name will throw a compiler error. Note that if the value assigned to a \`const\` variable is an object or array, the object or array may still be modified. In other words, it's only the variable name that is bound permanently -- the value itself is still mutable.
-
+Além disso, variáveis declaradas com \`const\` só podem ser atribuídas uma vez. A atribuição de outro valor para o mesmo nome resultará num erro de compilação. Observe que se o valur atribuído para uma \`const\` for um objeto ou array, o objeto ou array ainda podem ser modificados. Em outras palavras, apenas o nome da variável foi vinculado permanentemente -- o valor em sim ainda é mutável.
+ 
 <EditorTranspiler
   code=${code}
-  title=${'Using const and let'}
+  title=${'Usando const e let'}
 />
 
-You'll notice that the compiled output replaces \`const\` and \`let\` with \`var\`. You'll also notice that Babel transforms \`const a = 3\` into \`var _a = 3\`. This is so that your code can run on older platforms that don't support the new block-scoped variable declarations. It's the Babel compiler that enforces proper usage and block-scoping, rather than the runtime JavaScript engine.
+Você pode perceber que a saída do código compilado substitui \`const\` e \`let\` por \`var\`. Perceba também que Babel transforma \`const a = 3\` em \`var _a = 3\`. Isso é para que seu código possa executar em plataforma mais antigas que não suportam as novas declarações de variáveis de escopo de bloco. É o compilador Babel que impõe o uso correto e o escopo de bloco, em vez do engine de runtime JavaScript.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>

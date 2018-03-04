@@ -7,7 +7,7 @@ let sections = [
   {depth: 0, title: 'JavaScript Moderno', slug: 'modern_javascript', componentName: 'ModernJavascript'},
   {depth: 1, title: 'ES6', slug: 'es6', componentName: 'ES6'},
 
-  {depth: 2, title: 'Block Scoped Declarations', slug: 'block_scoped_declarations', componentName: 'BlockScopedDeclarations'},
+  {depth: 2, title: 'Declarações de escopo de bloco', slug: 'block_scoped_declarations', componentName: 'BlockScopedDeclarations'},
   {depth: 2, title: 'Fat Arrow Functions', slug: 'fat_arrow_functions', componentName: 'FatArrowFunctions'},
   {depth: 2, title: 'Destructuring', slug: 'destructuring', componentName: 'Destructuring'},
   {depth: 2, title: 'Imports and Exports', slug: 'imports_and_exports', componentName: 'ImportsAndExports'},
