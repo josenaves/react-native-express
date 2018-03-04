@@ -14,7 +14,7 @@ export default class EditorTranspiler extends Component {
         height={340}
         fullscreen={false}
         showTranspiler={true}
-        transpilerTitle={'Output compiled with Babel'}
+        transpilerTitle={'Saída compilada com Babel'}
         {...this.props}
       />
     )
