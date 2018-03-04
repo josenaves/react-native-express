@@ -5,13 +5,13 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-ECMAScript is the language specification used to implement the JavaScript language. ES6, or ECMAScript 6, is the first significant update to the language since ES5 was initially released in 2009.
+ECMAScript é a especificação de linguagem usada para implementar JavaScript. ES6, ou ECMAScript 6, é a primeira atualização significante da linguagem desde que ES5 foi inicialmente lançada em 2009.
 
-Many ES6 features are already available in modern JavaScript engines. Using Babel, however, gives us access to many more features, while ensuring our JavaScript runs on more platforms. React Native uses Babel to enable ES6 features and ensure cross-platform consistency, as your JavaScript will run on Android, iOS, Windows, and other platforms.
+Muitas features da ES6 já estão disponíveis em engines JavaScript modernos. Usando Babel, no entanto, nós temos acesso a muitas outras features, garantindo que nosso JavaScript executará em mais plataformas. React Native usa Babel para habilitar features do ES6 e garantir consistência cross-platform, já que seu código JavaScript será executado em Android, iOS, Windows, e outras plataformas.
 
-# ES6 Highlights
+# Destaques da ES6
 
-Let's take a look at some of the new language features we'll be using, and how they get compiled through Babel. There are a lot of language features to go through, so if you get tired, you can move on to [React Components](components), and finish up the language sections another time.
+Vamos dar uma olhada em algumas features da "nova" linguagem que estaremos usando e como elas são compiladas via Babel. Há muitas features da linguagem para olhar, então se você ficar cansado, vá para [Componentes React](components), e termine as seções da linguagem uma outra hora.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>
