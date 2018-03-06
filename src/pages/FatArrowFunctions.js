@@ -19,13 +19,13 @@ const squareSum = (...args) => {
 this.items.map(x => this.doSomethingWith(x))`
 
 const content = markdown(markdownOptions)`
-The **fat arrow** \`=>\` is used to define anonymous functions. There are two important differences in the behavior of these functions, compared to functions defined with \`function\`.
+**Fat arrow** \`=>\` (literalmente 'seta gorda' - vamos manter o termo em inglês) é usada para definir funções anônimas. Existem duas diferenças importantes no comportamento dessas funções em comparação com as funções definidas com a palavra-chave \`function\`.
 
-First, the binding for the keyword \`this\` is the same outside and inside the fat arrow function. This is different than functions declared with \`function\`, which can bind \`this\` to another other object upon invocation. Maintaining the \`this\` binding is very convenient for operations like mapping: \`this.items.map(x => this.doSomethingWith(x))\`.
+Primeiramente, o binding para a palavra-chave \`this\` é o mesmo dentro e fora da função fat arrow. Isso é diferente das funções declaradas com \`function\`,  as quais podem fazer bind do  \`this\` com outro objeto após chamada. Manter o binding do \`this\` é muito conveniente para operações como mapeamento: \`this.items.map(x => this.doSomethingWith(x))\`.
 
-Second, fat arrow functions don't have an \`arguments\` object defined. You can achieve the same thing using the **spread syntax**: \`(...args) => doSomething(args[0], args[1])\`.
+Segundo, funções fat arrow não tem um objeto \`arguments\` definido. Você pode fazer a mesma coisa usando a **sintaxe de spread**: \`(...args) => doSomething(args[0], args[1])\`.
 
-The fat arrow function syntax can vary a bit. If the function takes exactly one parameter, the parentheses can be omitted: \`x => Math.pow(x, 2)\`. Any other number of arguments will need parentheses: \`(x, y) => Math.pow(x, y)\`. If the function body is not wrapped in curly braces (as in the previous sentences), it is executed as an **expression**, and the return value of the function is the value of the expression. The function body can be wrapped in curly braces to make it a **block**, in which case you will need to explicitly \`return\` a value, if you want something returned. You will likely use the curly braces and block version more frequently, as this allows the function body to include multiple lines of code.
+A sintaxe de uma função fat arrow pode variar um pouco. Se a função tem exatamente um parâmetro, os parênteses podem ser omitidos: \`x => Math.pow(x, 2)\`. Qualquer outro número de argumentos precisará de parênteses: \`(x, y) => Math.pow(x, y)\`. Se o corpo da função não estiver envolvido por chaves (como nas sentenças anteriores), ela é executada como uma **expressão**, e o valor de retorno da função é o valor dessa expressão. O corpo da função pode ser envolvido entre chaves para criar um **bloco**, no qual será explicitamente necessário  \`retornar\` um valor, caso você queira retornar qualquer coisa. Você precisará usar a versão com chaves e blocos mais frequentemente, já que isso permite que o corpo da função inclua múltiplas linhas de código.
 
 <EditorTranspiler
   code=${code}
