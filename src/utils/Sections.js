@@ -8,7 +8,7 @@ let sections = [
   {depth: 1, title: 'ES6', slug: 'es6', componentName: 'ES6'},
 
   {depth: 2, title: 'Declarações de escopo de bloco', slug: 'block_scoped_declarations', componentName: 'BlockScopedDeclarations'},
-  {depth: 2, title: 'Fat Arrow Functions', slug: 'fat_arrow_functions', componentName: 'FatArrowFunctions'},
+  {depth: 2, title: 'Funções Fat Arrow', slug: 'fat_arrow_functions', componentName: 'FatArrowFunctions'},
   {depth: 2, title: 'Destructuring', slug: 'destructuring', componentName: 'Destructuring'},
   {depth: 2, title: 'Imports and Exports', slug: 'imports_and_exports', componentName: 'ImportsAndExports'},
   {depth: 2, title: 'Default Parameters', slug: 'default_parameters', componentName: 'DefaultParameters'},
