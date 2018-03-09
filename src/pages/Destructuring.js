@@ -12,7 +12,7 @@ const obj = {a: 'x', b: 'y', c: 'z'}
 const {a, b, c} = obj`
 
 const content = markdown(markdownOptions)`
-Destructuring is a convenient way to extract multiple keys from an object or array simultaneously and assign the values to local variables.
+Destructuring é uma maneira conveniente de se extrair várias chaves de um objeto ou array e simultaneamente atribuir os valores a variáveis locais.
 
 <EditorTranspiler
   code=${code}
