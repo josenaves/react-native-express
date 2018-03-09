@@ -31,25 +31,25 @@ const classExtendsExample = `class Cat extends Animal {
 }`
 
 const content = markdown(markdownOptions)`
-In ES5, classes are just functions, with instance methods assigned to \`MyFunction.prototype\`. ES6 allows us to use the simpler \`class\` syntax.
+Em ES5, classes são apenas funções com métodos de instâncias atribuídos a \`MyFunction.prototype\`. ES6 permite usarmos a sintaxe mais simples de \`class\`.
 
-\`class\` gives us built in instance functions, static functions, and inheritance. \`constructor\` is a special function that is called automatically every time a class instance is created. We can use the \`static\` keyword to declare static class functions.
+\`class\` nos dá funções de instância, funções estáticas e herança.  \`constructor\` é uma função especial que é chamada automaticamente toda vez que uma instância da classe for criada. Nós podemos usar a palavra-chave  \`static\` para declarar funções estáticas de classe.
 
 <EditorTranspiler
   code=${classExample}
   title=${'Using class'}
 />
 
-# Inheritance
+# Herança
 
-The \`class\` gives us simple inheritance with the keyword \`extends\`. In classes that inherit from parents, we have access to a function \`super()\`. Within an inherited function in that child class, \`super\` will invoke the parent class's version of that function.
+\`class\` nos dá herança simples com a palavra-chave \`extends\`. Em classes filhas, temos acesso a função \`super()\`. Dentro da função herdada na classe filha, \`super\` invocará a versão da função na classe pai.
 
 <EditorTranspiler
   code=${classExtendsExample}
-  title=${'Inheritance'}
+  title=${'Herança'}
 />
 
-For full details on the \`class\` syntax, see the MDN reference for [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+Para maiores detalhes sobre a sintaxe de \`class\`, veja a referência no MDN [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 `
 
 export default props =>
