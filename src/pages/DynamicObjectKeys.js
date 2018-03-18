@@ -12,11 +12,11 @@ const animals = {
 console.log(animals.animalcat) // true`
 
 const content = markdown(markdownOptions)`
-In ES5, object literal keys are always interpreted as a string. ES6 allows us to use computed values as keys in object literals, using square bracket syntax: \`[myKey]\`.
+Com ES5, as chaves de objetos são sempre interpretadas como strings. ES6 nos permite usar valores computados como chaves usando colchetes: \`[minhaChave]\`.
 
 <EditorTranspiler
   code=${code}
-  title=${'Dynamic object keys'}
+  title=${'Chaves dinânmicas'}
 />
 `
 

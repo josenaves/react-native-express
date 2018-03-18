@@ -13,7 +13,7 @@ let sections = [
   {depth: 2, title: 'Imports e Exports', slug: 'imports_and_exports', componentName: 'ImportsAndExports'},
   {depth: 2, title: 'Parâmetros Default', slug: 'default_parameters', componentName: 'DefaultParameters'},
   {depth: 2, title: 'Classes', slug: 'classes', componentName: 'Classes'},
-  {depth: 2, title: 'Dynamic Object Keys', slug: 'dynamic_object_keys', componentName: 'DynamicObjectKeys'},
+  {depth: 2, title: 'Chaves dinâmicas', slug: 'dynamic_object_keys', componentName: 'DynamicObjectKeys'},
   {depth: 2, title: 'Array Spread', slug: 'array_spread', componentName: 'ArraySpread'},
 
   {depth: 1, title: 'ES7 and Beyond', slug: 'es7_and_beyond', componentName: 'ES7AndBeyond'},
