@@ -15,8 +15,7 @@ newFruits[0].name = 'fofana'
 console.log(fruits[0].name) // fofana`
 
 const content = markdown(markdownOptions)`
-The array spread syntax makes it easy to expand an array. This can be used to make a shallow copy of an array, optionally with other elements added to the copy.
-
+A sintaxe de *array spread* (algo como espalhamento de array) torna fácil expandirmos um array. Isso pode ser utilizado para fazer uma *cópia rasa* de um array, opcionalmente com outros elementos adicionados a cópia.
 <EditorTranspiler
   code=${code}
   title=${'Array spread'}
