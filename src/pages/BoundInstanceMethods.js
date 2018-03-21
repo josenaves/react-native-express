@@ -15,15 +15,15 @@ const code = `class Cat {
 }`
 
 const content = markdown(markdownOptions)`
-When a function is assigned to a class instance property, that function is bound to the instance.
+Quando uma função é atribuída a uma propriedade de instância, ela se liga a instância.
 
-You've probably seen functions bound to class instances in the \`constructor\`, e.g. \`this.printName = this.printName.bind(this)\`. Binding here ensures that a class's instance function is invoked with the correct context.
+Você provavelmente viu funções ligadas a instâncias no \`constructor\`, e.g., \`this.printName = this.printName.bind(this)\`. O bind aqui garante que um função de instância é invocada com o contexto correto.
 
-With ES7 class instance properties, we can instead simply say \`printName = () => ...\`. The \`printName\` function below is bound to instance at the time the instance is constructed.
+Com as propriedades de instâncias de classe do ES7, podemos simplesmente fazer \`printName = () => ...\`.  A função \`printName\` abaixo é ligada a instância no momento que a instância é construída.
 
 <EditorTranspiler
   code=${code}
-  title=${'Bound instance methods'}
+  title=${'Métodos bind de instância'}
 />
 `
 

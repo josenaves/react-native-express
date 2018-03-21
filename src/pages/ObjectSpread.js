@@ -7,24 +7,24 @@ import { EditorTranspiler, PageHeader } from '../components'
 
 const code = `const cat = {
   name: 'Luna',
-  friends: {best: 'Ellie'},
+  friends: { best: 'Ellie' },
   legs: 4,
 }
-const strangeCat = {...cat, legs: 6}
+const strangeCat = { ...cat, legs: 6 }
 
-const sameCat = {...cat}
+const sameCat = { ...cat }
 console.log(cat.friends === sameCat.friends) // true
 sameCat.friends.best = 'Buddy'
 console.log(cat.friends.best) // Buddy`
 
 const content = markdown(markdownOptions)`
-Similar to the array spread operator in ES6, ES7 offers a spread operator \`...\` for objects. This tries to use ES6's \`Object.assign\`, as you'll see when you view the babel output of the spread operator. This can be very useful in copying or copying and modifying objects.
+Do mesmo modo que o operador de espalhamento de array do ES6, ES7 oferece um operador de espalhamento (spread)  \`...\` para objetos. Por baixo dos panos, ele tentará usar o \`Object.assign\` do ES6, como você verá quando visualizar a saída do Babel. Isso pode ser muito útil para cópia e para cópia e alteração de objetos.
 
-We can copy an object simply with \`${"{...originalObj}"}\`. Note that this is a shallow copy. We can also extend an object with \`${"{...originalObj, key1: 'newValue'}"}\`.
+Podemos copiar um objeto simplesmente com  \`${"{ ...originalObj }"}\`. Observe que isso é uma cópia rasa. Podemos também extender um objeto com \`${"{...originalObj, key1: 'newValue'}"}\`.
 
 <EditorTranspiler
   code=${code}
-  title=${'Object spread operator'}
+  title=${'Operador de espalhamento de objeto'}
 />
 `
 

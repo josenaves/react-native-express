@@ -16,13 +16,13 @@ const b = (
 )`
 
 const content = markdown(markdownOptions)`
-JSX is an extension to JavaScript that adds a new kind of <b>expression</b>. You can use JSX expressions anywhere you could use any other expression.
+JSX é uma extensão do JavaScript que adiciona um novo tipo de expressão. Você pode usar <b>expressões</b> JSX em qualquer lugar que você usara qualquer outro tipo de expressão.
 
-JSX is a shortcut for using the \`React.createElement()\` API, that is much more concise, easy to read, and visually looks a little like the generated UI (as both are tree-like). You don't <i>have to</i> use JSX, but there are practically no disadvantages, so you probably should use it.
+JSX é um atalho para o uso da API \`React.createElement()\`, que é muito mais conciso, fácil de ler, e visualmente se parece como a UI gerada (já que ambas são baseadas em árvores). Você não tem que usar JSX mas praticamente não há desvantagens, então provavelmente você deveria usar.
 
-JSX is tag-based like XML. Each tag, like \`${'<View />'}\`, is transformed into a call to \`React.createElement()\`. Any attributes become \`props\` of the instantiated component. Attributes can be strings like \`foo='hello'\`, or they can be interpolated JavaScript expressions when wrapped in curly braces as in \`${'bar={baz}'}\` (which would refer to the variable baz).
+JSX é baseada em tags assim como XML. Cada tag, como \`${'<View />'}\`, é transformada em uma chamada para \`React.createElement()\`. Quaisquer atributos se tornam \`props\` do componente instanciado. Atributos podem ser strings como \`foo='hello'\` ou eles podem ser expressões JavaScript interpoladas quando são colocados entre chaves como em \`${'bar={baz}'}\` (que se refere a variável baz).
 
-Tags can be self-closing, like \`${'<View />'}\`, or they can include both an opening and closing tag, like \`${'<View></View>'}\`. To include children elements, you will need to use an opening and closing tag and put the children tags within.
+Tags podem ser 'auto-fechadas'como \`${'<View />'}\`, ou elas podem incluir tanto uma abertura e fechamento de tag como \`${'<View></View>'}\`. Para incluir elementos filhos, você precisará abrir e fechar a tag e colocar as tags filhas dentro.
 
 <EditorTranspiler
   code=${code}

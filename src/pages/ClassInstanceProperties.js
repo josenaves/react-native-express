@@ -20,11 +20,11 @@ new Cat() // => Tom true
 `
 
 const content = markdown(markdownOptions)`
-Class instance properties are a convenient way to declare properties for each instance, equivalent to assigning these properties in the constructor function.
+Propriedade de instância é um modo conveniente de se declarar propriedades para cada uma das instâncias, equivalente a atribuir essas propriedades na função construtora.
 
 <EditorTranspiler
   code=${code}
-  title=${'Class instance properties'}
+  title=${'Propriedades de instância'}
   height={400}
 />
 `
