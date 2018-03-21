@@ -11,11 +11,11 @@ const code = `class Cat {
 console.log(Cat.legCount) // 4`
 
 const content = markdown(markdownOptions)`
-As we saw in our ES6 section, static functions on classes exist as a part of ES6. In ES7, we can use the \`static\` keyword to declare static properties as well.
+Como vimos na seção ES6, funções estáticas em classes existem como parte do ES6. No ES7, podemos usar a palavra-chave \`static\` para declarar propriedades estáticas do mesmo modo.
 
 <EditorTranspiler
   code=${code}
-  title=${'Static properties'}
+  title=${'Propriedades estáticas'}
 />
 `
 

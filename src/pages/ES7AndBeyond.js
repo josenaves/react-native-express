@@ -6,9 +6,9 @@ import Page from './Page'
 import { PageHeader } from '../components'
 
 const content = markdown(markdownOptions)`
-ES6 is the set of Javascript features as of 2015. There have already been many other features proposed for future versions of Javascript, including ES7 (2016) and ES8. With Babel, we can use many of these features today.
+ES6 é o conjunto de features para Javascript de 2015. Já existem muitas outras features propostas para as futuras versões de Javascript, incluindo ES7 (2016) e ES8. Como Babel, nós podemos usar muitas destas features hoje.
 
-Some of these features have already become standards in modern Javascript development. Let's walk through a few of the more popular and useful features.
+Algumas destas features já se tornaram padrão no desenvolvimento Javascript moderno. Vamos ver algumas das features mais populares e úteis.
 `
 
 export default props =>
