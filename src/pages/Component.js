@@ -5,11 +5,11 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-\`Components\` are the building block of any UI. React Native manages the mapping from JavaScript components to the native UI which is actually rendered.
+\`Componentes\` são as peças de montar de qualquer UI. React Native gerencia o mapeamento entre os componentes JavaScript e a UI nativa que está sendo renderizada.
 
-The entire UI of the application is specified by declaring which components to render, and in what order. Components are nested inside other components, forming a tree data structure. The top level component, or the root of the tree, is known as the root component. Nested components are called children components.
+Toda a UI da aplicação é especificada declarando quais componentes renderizar e em que ordem. Componentes são aninhados dentro de outros componentes, formando uma estrutura de árvore. O componente de nível mais alto, ou a raiz da árvore, é conhecido como componente raiz. Componentes aninhados são chamaods de componentes filhos.
 
-In the next sections, we'll cover the two most important aspects of using components, the <b>Component API</b> and the <b>Component Lifecycle API</b>.
+Na próxima seção, nós cobriremos os dois aspectos mais importantes de se usar componentes, a <b>Component API</b> e a <b>Component Lifecycle API</b>.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>
