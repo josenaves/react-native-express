@@ -57,23 +57,23 @@ AppRegistry.registerComponent('App', () => App)
 const content = markdown(markdownOptions)`
 ## **\`this.props\`**
 
-\`Components\` can be configured upon instantiation by passing properties to the \`constructor\` - these properties are called \`props\`. \`props\` may be accessed from within the component's methods as \`this.props\`, in order to alter how the component is rendered and/or how it behaves. However, \`props\` must <b>not be altered</b> from within the component's methods.
+\`Componentes\` podem ser configurados no momento de criação passando-se propriedades para o \`constructor\` - estas propriedades são chamadas de \`props\`. \`props\` podem ser acessadas de dentro dos métodos dos componentes usando \`this.props\`, para alterar como o componente é renderizado e/ou como ele se comporta. No entanto, \`props\` <b>não podem ser alteradas</b> dentro dos métodos do componente.
 
-A parent element may alter a child element's \`props\` at any time. The child element will generally re-render itself to reflect its new configuration parameters. A child component may decide not to re-render itself even though its configuration has changed, as determined by \`shouldComponentUpdate()\` (more on this in the Component Lifecycle API section).
+Um elemento pai pode alterar \`props\` de um componente filho a qualquer momento. O elemento filho geralmente irá renderizar de novo para refletir sua nova configuração. Um componente filho pode decidir não se renderizar novamente mesmo que sua configuração tenha mudado, como determidado pelo método \`shouldComponentUpdate()\` (mais na seção Component Lifecycle API).
 
 ## **\`this.state\`**
 
-\`Components\` may maintain their state internally within the object \`state\`. \`this.state\` may be accessed from within component methods. Unlike \`props\`, parent elements may not access a child's \`state\`, as it is intended to manage the child's internal state rather than external configuration.
+\`Componentes\` podem manter seu estado internamente com o objeto \`state\`. \`this.state\` pode ser acessado de dentro dos métodos do componente. Ao contrário de \`props\`, elementos pais não podem acessar o estado de um filho, como se destina gerenciar o estado interno do filho do que configuração externa.
 
-Note that you should <i>never</i> directly assign to a specific key within the \`state\` object, e.g. \`this.state.foo = 'bar'\`, but instead use the method \`this.setState()\`.
+Observe que você <i>nunca</i> deve atribuir uma chave específica dentro do objeto  \`state\`, por exemplo, \`this.state.foo = 'bar'\`. Neste caso, você deve usar o método \`this.setState()\`.
 
 ## **\`this.setState(object newState)\`**
 
-\`Components\` may update their \`state\` by passing an object to the method \`this.setState()\`. Any keys in the object passed to the method will be merged into (and override any existing keys in) \`this.state\`.
+\`Componentes\` podem atualizar seu \`state\` passando um objeto para o método \`this.setState()\`. Quaisquer chaves no objeto passado para o método serão mescladas dentro (e irão sobrescrever quaisquer chaves pré-existentes) de \`this.state\`.
 
-# Example
+# Exemplo
 
-The following example includes a \`Counter\` component that maintains the elapsed time internally as \`state.count\`. The \`App\` component renders the \`Counter\` component with two \`props\`: \`size\` and \`color\`. The \`App\` can easily render several \`Counter\` components with different sizes and colors.
+O exemplo a seguir inclui um componente \`Counter\` que mantém o tempo decorrido internamente como  \`state.count\`. O componente \`App\` renderiza o componente \`Counter\` com duas \`props\`: \`size\` e \`color\`.  \`App\` pode ser facilmente renderizar vários componentes \`Counter\` com diferentes tamanhos e cores.
 
 <WebPlayer code=${code} />
 `
