@@ -5,40 +5,40 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-Components have a lifecycle: they are instantiated, mounted, rendered, and eventually updated, unmounted, and destroyed. The lifecycle helps manage the complexity of different platform APIs (iOS, Android) by providing a simple, consistent abstraction layer. The lifecycle also allows you to optionally execute custom code at each step for more fine-grained control of the rendering.
+Componentes tem um ciclo de vida: são instanciados, montados, renderizados, e eventualmente atualizados, desmontados, e destruídos. O ciclo de vida ajuda gerenciar a complexidade de diferentes plataformas (iOS, Android) fornecendo uma simples mas consistente camada de abstração. O ciclo de vida também permite que você execute opcionalmente código customizado em cada um dos passos para um controle mais fino da renderização.
 
-Let's look at each phase of the component lifecycle.
+Vamos ver cada uma das fases do ciclo de vida dos componentes.
 
-## Mounting Cycle
+## Ciclo de montagem
 
 * \`constructor(object props)\`\\
-The component class is instantiated. The parameters to the constructor are the element's initial \`props\`, as specified by the parent element. You can optionally specify an initial state for the element by assigning an object to \`this.state\`. At this point, no native UI has been rendered yet for this element.
+O componente é instanciado. Os parâmetros do constructor são as \`props\` iniciais do elemento, como especificado pelo elemento pai. Você pode especificar opcionalmente um estado inicial para o elemento ao atribuir um objeto para \`this.state\`. Neste ponto, nenhuma UI nativa foi renderizada ainda para este elemento.
 
 * \`componentWillMount()\`\\
-This method is invoked only once, before rendering occurs for the first time. At this point, there is still no native UI rendered for this element.
+Este método é chamado apenas uma vez, antes da renderização acontecer pela primeira vez. Neste ponto, ainda não há UI nativa renderizada para este elemento.
 
 * \`render() -> React Element\`\\
-The render method must return a React Element to render (or null, to render nothing).
+O método render deve retornar um elemento React para ser renderizado (ou null, para não renderizar nada).
 
 * \`componentDidMount()\`\\
-This method is invoked only once, after rendering occurs for the first time. At this point, the native UI for this element has finished rendering, and may be accessed through \`this.refs\` for direct manipulation. If you need to make async API calls or execute delayed code with \`setTimeout\`, that should generally be done in this method.
+Este método é invocado apenas uma vez, após a renderização ocorrer pela primeira vez. Neste ponto, a UI nativa pare este elemento terminou a renderização, e pode ser acessado atráves de  \`this.refs\` para manipulação direta. Se você pricisa fazer chamadas a APIs assíncronas ou executar código agendado com \`setTimeout\`, geralmente isso é feito nesse método.
 
-## Updating Cycle
+## Ciclo de atualização
 
 * \`componentWillReceiveProps(object nextProps)\`\\
-The parent of this component has passed a new set of \`props\`. This component will re-render. You may optionally call \`this.setState()\` to update this component's internal state before the \`render\` method is called.
-
+O pai deste componente passou um novo conjunto de \`props\`. Este componente irá renderizar novamente. Você pode opcionalmente chamar  \`this.setState()\` para atualizar o estado interno deste componente antes do método \`render\` ser chamado.
+ 
 * \`shouldComponentUpdate(object nextProps, object nextState) -> boolean\`\\
-Based on the next values of \`props\` and \`state\`, a component may decide to re-render or not to re-render. The base class's implementation of this method always returns \`true\` (the component <i>should</i> re-render). For optimization, override this method and check if either \`props\` or \`state\` have been modified, e.g. run an equality test of each key/value in these objects. Returning \`false\` will prevent the \`render\` method from being called.
+Baseado nos próximos valores de \`props\` e \`state\`, um componente pode decidir renderizar novamente ou não renderizar. A implementação base deste método sempre retorna  \`true\` (o componente <i>deve</i> ser renderizado novamente). Para otimização, sobrescreva esse método e verifique se tanto \`props\` ou \`state\` foram modificados, por exemplo, execute um teste de igualdade de chave/valor nestes objetos. Retornando \`false\` irá previnir que o método \`render\` seja chamado.
 
 * \`componentWillUpdate(object nextProps, object nextState)\`\\
-This method is invoked, after the decision has been made to re-render. You may not call \`this.setState()\` here, since an update is already in progress.
+Este método é invocado após a decisão ser feita de renderizar novamente. Você não pode chamar  \`this.setState()\` aqui, uma vez que uma atualização já está em andamento.
 
 * \`render() -> React Element\`\\
-This method is called, assuming \`shouldComponentUpdate\` returned \`true\`. The render method must return a React Element to render (or null, to render nothing).
+Este método é chamado assumindo que  \`shouldComponentUpdate\` retornou \`true\`. O método render deve retornar um elemento React para renderizar (ou null, para não renderizar nada).
 
-* \`componentDidUpdate(object prevProps, object prevState)\`\\
-This method is invoked after re-rendering occurs. At this point, the native UI for this component has been updated to reflect the React Element returned from the \`render()\` method.
+* \`componentDidUpdate(object prevProps, object prevState)\`\\ß
+Este método é chamado após uma renderização acontecer. Neste ponto, a UI nativa deste componente foi atualizada para refletir o elemento React retornado pelo método \`render()\`.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>
