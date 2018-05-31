@@ -6,13 +6,13 @@ import DefaultPage from './DefaultPage'
 import { WebPlayer } from '../components'
 
 const content = markdown(markdownOptions)`
-Lists are like ScrollViews, but optimized to recycle elements and reduce re-renders for better performance. As a result, the APIs are a little more complicated than ScrollView. The built-in list components in React Native are still evolving, so you can expect more stability and performance from these in the future.
+Lists são com ScrollViews mas otimizadas para reciclar elementos e reduzir renderizações para melhor performance. Como resultado, a API é um pouco mais complicada que a do ScrollView. Os componentes de lista do React Native ainda estão evoluindo, então você pode esperar mais estabilidade e performance no futuro.
 
-FlatList and SectionList are the new recommended list components for simple, performant lists. They're built on top of VirtualizedList, which is a highly flexible and optimized list implementation, which generally shouldn't be used directly.
+FlatList e SectionList são os novos componentes de lista recomendados para listas simples e peformáticas. Elas estão construídas em cima da VirtualizedList, que é uma implementação de lista altamente flexível e otimizada e que geralmente não deve ser usada diretamente.
 
-However, at the time of writing, both of these are currently missing important features (e.g. sticky headers), and so you may still need to use the previous list component, ListView. 
+No entanto, no tempo de escrita deste artigo, ambas não tem funcionalidades importantes como, por exemplo cabeçalhos fixos (sticky headers), então pode ser que você ainda precise usar o componente antigo de lista, o ListView.
 
-In general, start with a FlatList or SectionList. Ultimately, switching between these and ListView isn't that difficult or time consuming, so if you need more capabilities down the road, you can switch later.
+Em geral, começe usandno uma FlatList ou SectionList. Normalmente, migrar entre estas duas e uma ListView não é tão difícil, então se você precisar de mais funcionalidades, você pode mudar mais tarde.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>

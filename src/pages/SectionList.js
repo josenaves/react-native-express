@@ -6,19 +6,19 @@ import DefaultPage from './DefaultPage'
 import { WebPlayer, SnackPlayer } from '../components'
 
 const content = markdown(markdownOptions)`
-\`SectionList\`s are like \`FlatList\`s, but they can have section headers to separate groups of rows.
+\`SectionList\`s são como \`FlatList\`s, mas elas podem ter cabeçalhos de seção para separar grupos de linhas.
 
-\`SectionList\`s render each item in their input \`sections\` using the \`renderSectionHeader\` and \`renderItem\` prop. Each item in \`sections\` should be an object with a unique id (the key), and an array \`data\` of row data. Each item in \`data\` should also be an object with a unique id. The \`renderSectionHeader\` prop is a function which takes an item from the \`sections\` array and maps it to a React Element. The \`renderItem\` prop, just like for \`FlatList\`, is a function which takes an item from the \`data\` array (for a section) and returns a React Element.
+\`SectionList\`s renderizam cada um dos itens de sua entrada  \`sections\` usando as props  \`renderSectionHeader\` e \`renderItem\`. Cada item em  \`sections\` deve ser um objeito com um id único (a chave), e um array \`data\` com dados das linhas. Cada item em  \`data\` também deve ser um objeto com id único. A prop \`renderSectionHeader\` é uma função que pega um item do array \`sections\` e o mapeia para um elemento React. A prop  \`renderItem\`, assim como \`FlatList\`, é uma função que pega item no array  \`data\` (para uma seção) e retorna um elemento React.
 
-# Homogenous Row Example
+# Exemplo de Linha Homogêneo
 
-If each row is rendered with the same \`renderItem\` function, we call this homogenous rendering.
+Se cada uma das linhas for renderizdas com a mesma função \`renderItem\`, nós podemos chamar isso de renderização homogênea.
 
 ${<SnackPlayer id="HJDgGWugb" />}
 
-# Heterogenous Row Example
+# Exemplo de Linha Heterogênea
 
-A \`renderItem\` function may be specified as part of the \`sections\` data, one per section, rather than as a \`prop\` of the \`SectionList\`. This lets us render each section differently. Alternately, you could use the item data to determine how to render items differently.
+Uma função  \`renderItem\` pode ser especificada como parte dos dados de  \`sections\`, uma por seção, ao invés de uma  \`prop\` de \`SectionList\`. Isso nos permite renderizar cada uma das seções de maneira diferente. De maneira alternativa, você poderia usar os dados dos itens para determinar como renderizar os itens de maneira diferente.
 
 ${<SnackPlayer id="BJO0NZ_eW" />}
 `

@@ -30,11 +30,11 @@ AppRegistry.registerComponent('App', () => App)
 `
 
 const content = markdown(markdownOptions)`
-\`Image\` is used to render images. Images may either be bundled with the app as assets, or downloaded from the web.
+\`Image\` é usada para renderizar imagens. Imagens podem estar dentro do app como um asset ou serem baixadas da web.
 
-To bundle an image in the app, \`require()\` the image file just as you would any other file. When loading bundled images, the same images are used to render on both iOS and Android. Writing \`require('./test.png')\` will choose the most appropriate image for the device size: \`test.png\`, \`test@2x.png\`, or \`test@3x.png\`.
+Para distribuir uma imagem no app, use \`require()\` no arquivo de imagem como você faria com qualquer outro arquivo. Ao carregar imagens dentro do app, as mesmas imagens são usadas para renderizar em iOS e Android. Ao escrever \`require('./test.png')\` , será usada a imagem mais apropriada para o tamanho do aparelho: \`test.png\`, \`test@2x.png\`, ou \`test@3x.png\`.
 
-For images downloaded from the web, layout works differently than for most other elements. Since the dimensions of the image aren't known until the image is downloaded, images can't be automatically stretched with \`flex: 1\`. Instead, you must specify dimensions in the style prop, e.g. \`${'style={{width: 100, height: 100}}'}\`. React Native is evolving quickly, however, and this behavior may change - when in doubt, try a few different layouts and see what happens!
+Para baixar imagens da web, o layout funciona diferentemente da maioria dos outros elementos. Uma vez que as dimensões da imagem não são conhecidas até que a imagem seja baixada, imagens não podem ser automaticamente esticadas com \`flex: 1\`. Neste caso, você precisa especificar as dimensões no estilo, por exemplo, \`${'style={{width: 100, height: 100}}'}\`. React Native está evoluíndo rapidamente, e este comportamento pode mudar - se tiver dúvida, tente layouts diferentes e veja o que acontece!
 
 ${<WebPlayer code={code} />}
 `

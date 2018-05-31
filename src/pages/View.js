@@ -38,36 +38,36 @@ AppRegistry.registerComponent('App', () => App)
 `
 
 const content = markdown(markdownOptions)`
-\`View\`s are the most basic building block of React Native apps, much like how \`div\`s are the most basic building block of websites. In terms of implementation, \`View\` is an abstraction layer on top of the target platform's native equivalent, whether that's \`UIView\`, \`android.view\`, \`${'<div>'}\`, or something else.
+\`View\`s são as mais básicas peças de constução de apps React Native, assim como \`div\`s são as mais básicas peças de construção de websites. Em termos de implementação, \`View\` é uma camada de abstração em cima do equivalente nativo, seja \`UIView\`, \`android.view\`, \`${'<div>'}\`, ou qualquer outra.
 
-\`View\`s are primarily used for styling and layout of children elements. Let's look at a few of the styles we can apply to views. The example below contains two \`View\`s: the outer view which specifies the alignment of the content contained within, and the inner view which draws a blue square.
+\`View\`s são usadas primeiramente para estilo e layoutdos elementos filhos. Vamos dar uma olhada em alguns dos estilos que podemos aplicar as views. O exemplo abaixo contém duas \`View\`s: a mais externa que especifica o alinhamento do conteúdo contido dentro dela, e a mais interna que desenha um quadrado azul.
 
 ${<WebPlayer code={code} />}
 
-Below you can find the most common styles. Feel free to experiment with them in the example code.
+Abaixo você pode ver os estilos mais comuns. Sinta-se a vontade para experimentar no código exemplo.
 
-# Layout Styles
+# Estilos de Layout
 
-Property | Type | Description
+Propriedade | Tipo | Descrição
 --- | --- | ---
-\`flex\` | \`number\` | What proportion of the available space should this element expand to fill? 0 means the element doesn't expand.
-\`flexDirection\` | \`string\` | Do you want a vertical (\`column\`) or horizontal (\`row\`) layout? This choice determines the orientation of the <b>primary axis</b> of your layout. One of: \`row, column\`.
-\`justifyContent\` | \`string\` | How should the content be distributed along the <b>primary axis</b> of your layout? Should it be at the start, the center, the end, or spaced evenly? One of: \`flex-start, center, flex-end, space-around, space-between\`.
-\`alignItems\` | \`string\` | How should the content be aligned along the <b>secondary axis</b> of your layout? (If the primary axis is \`row\`, then the secondary axis is \`column\`, and vice versa) Should content be aligned at the start, the center, the end, or stretched to fill? One of: \`flex-start, center, flex-end, stretch\`.
-\`width\` | \`number\` | A fixed width
-\`height\` | \`number\` | A fixed height
-\`margin\` | \`number\` | How much space should separate this element from other adjacent elements? For more granular control, use the properties: \`marginTop, marginBottom, marginLeft, marginRight\`.
-\`padding\` | \`number\` | How much padding should be within this element before its children are shown? For more granular control, use the properties: \`paddingTop, paddingBottom, paddingLeft, paddingRight\`.
+\`flex\` | \`number\` | Qual proporção do espaço disponível deve este elemento expandir para preencher? 0 significa que o elemento não deve expandir.
+\`flexDirection\` | \`string\` | Você quer um layout vertical (\`column\`) ou horizontal (\`row\`)? Esta escolha determina a orientação do <b>eixo primário</b> do seu layout. Deve ser um destes valores: \`row, column\`.
+\`justifyContent\` | \`string\` | Como o conteúdo deve ser distribuído ao longo do <b>eixo primário</b> do seu layout? Deve estar no começo, centro, no final, ou igualmente espaçado? Deve ser um destes valores: \`flex-start, center, flex-end, space-around, space-between\`.
+\`alignItems\` | \`string\` | Como o conteúdo deve estar alinhado ao longo do <b>eixo secundário</b> do seu layout? (Se o eixo primário for \`row\`, então o eixo secundário é \`column\`, e vice versa). O conteúdo deve estar alinhado no começo, no centro, no final, ou esticado para preencher o espaço? Deve ser um destes valores: \`flex-start, center, flex-end, stretch\`.
+\`width\` | \`number\` | Uma largura fixa
+\`height\` | \`number\` | Uma altura fixa
+\`margin\` | \`number\` | Quanto espaço deve separar este elemento de outros elementos adjascentes? Para um controle mais granular, use as propriedades: \`marginTop, marginBottom, marginLeft, marginRight\`.
+\`padding\` | \`number\` | Quanto de padding deve estar dentro deste elemento antes que seus filhos sejam mostrados? Para um controle mais granular, use as propriedades: \`paddingTop, paddingBottom, paddingLeft, paddingRight\`.
 
-# Visual Styles
+# Estilos Visuais
 
-Property | Type | Description
+Propriedade | Tipo | Descrição
 --- | --- | ---
-\`backgroundColor\` | \`string\` | The background color
-\`borderWidth\` | \`number\` | The border width. For more granular control, use the properties: \`borderTopWidth, borderBottomWidth, borderLeftWidth, borderRightWidth\`.
-\`borderColor\` | \`string\` | The color of the border. For more granular control, use the properties: \`borderTopColor, borderBottomColor, borderLeftColor, borderRightColor\`.
-\`borderRadius\` | \`number\` | Rounded edges
-\`opacity\` | \`number\` | How transparent should this element be? 0 means fully transparent, 1 means fully opaque.
+\`backgroundColor\` | \`string\` | A cor de fundo
+\`borderWidth\` | \`number\` | A espessura da borda. Para um controle mais granular, use as propriedades: \`borderTopWidth, borderBottomWidth, borderLeftWidth, borderRightWidth\`.
+\`borderColor\` | \`string\` | A cor da borda. Para um controle mais granular, use as propriedades: \`borderTopColor, borderBottomColor, borderLeftColor, borderRightColor\`.
+\`borderRadius\` | \`number\` | Cantos arredondados
+\`opacity\` | \`number\` | Quão transparente esse elemento deve ser? 0 significa totalmente transparente, 1 significa totalmente opaco.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>

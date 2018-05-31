@@ -5,11 +5,11 @@ import markdownOptions from '../utils/MarkdownOptions'
 import DefaultPage from './DefaultPage'
 
 const content = markdown(markdownOptions)`
-React Native includes a few dozen core components which can be used out-of-the-box. More complex components can be built by combining the core components in interesting ways.
+React Native inclui algumas dúzias de componentes base que podem ser usados de imediatamente. Componentes mais complexos podem ser construídos combinando componentes base de maneiras interessantes.
 
-Nearly all the core components extend the \`View\` component, and can be passed an optional \`style\` prop. The style can include visual properties like colors and borders, as well as layout properties. Components use the flexbox algorithm to specify the layout of their children.
+Praticamente todos os componentes base extendem o componente \`View\`, e podem receber uma prop  \`style\`  opcional. O estilo pode incluir propriedades visuais como cores e bordas, assim como propriedades de layout. Componentes usam o algoritmo flexbox para especificar o layout dos seus filhos.
 
-Let's take a more in-depth look at the flexbox algorithm and some of the most common core components.
+Vamos dar uma olhada mais profunda no algoritmo flexbox e alguns dos componentes mais comuns.
 `
 
 export default props => <DefaultPage {...props}>{content}</DefaultPage>

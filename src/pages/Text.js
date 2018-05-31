@@ -36,7 +36,7 @@ AppRegistry.registerComponent('App', () => App)
 `
 
 const content = markdown(markdownOptions)`
-\`Text\` is used to render text. Unlike on the web, text <i>must</i> be wrapped in a \`${'<Text>'}\` component.
+\`Text\` é usado para renderizar texto. Ao contrário da web, textos <i>devem</i> ser envolvidos num componente \`${'<Text>'}\`.
 
 ${<WebPlayer code={code} />}
 `
