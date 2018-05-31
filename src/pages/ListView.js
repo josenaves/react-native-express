@@ -141,37 +141,38 @@ AppRegistry.registerComponent('App', () => App)
 `
 
 const content = markdown(markdownOptions)`
-\`ListViews\`s are used for large quantities of scrollable content. \`ListView\` existed long before \`FlatList\` and \`SectionList\`, and it still has some features that the newer list components are currently missing (e.g. sticky headers).
+\`ListViews\`s são usadas para grandes quantidades de conteúdo rolável. \`ListView\` existiam bem antes de \`FlatList\` and \`SectionList\`, e ainda tem algumas funcionalidades que os novos componentes de lista não tem ainda (por exemplo, headers fixos).
 
-\`ListViews\`s render each item in their input \`dataSource\` using the \`renderRow\` prop. The \`renderRow\` prop is a function which takes an item from the \`dataSource\` and maps it to a React Element, e.g. if \`dataSource\` contains an array of strings, then \`${`(rowData) => <Text>{rowData}</Text>`}\`.
+\`ListViews\`s  renderizam cada item de sua entrada \`dataSource\` usando a prop  \`renderRow\`. A prop  \`renderRow\` é uma função que pega um item do \`dataSource\`  e o mapeia num elemento React, por exemplo, se \`dataSource\` contém um array de strings, então \`${`(rowData) => <Text>{rowData}</Text>`}\`.
 
 # DataSource
 
-\`ListView\`s render content using the \`DataSource\` API. In its simplest usage, \`DataSource\` takes an array as input. The array can contain any kind of data.
+\`ListView\`s renderizam conteúdo usando a API \`DataSource\`. No seu uso mais simples, \`DataSource\` toma um array como entrada. O array pode conter qualquer tipo de dado.
 
-To provide data to a \`ListView\`, you must create a new source with \`new ListView.DataSource(options)\`, where \`options\` must be an object with a \`rowHasChanged\` function defined. \`rowHasChanged\` compares row data so that only the rows which have actually changed will be re-rendered. Depending on what kind of data you're rendering, a suitable \`rowHasChanged\` function might look like:
-- \`(r1, r2) => r1 !== r2\` (identity comparison)
-- \`(r1, r2) => r1.id !== r2.id\` (comparing a specific field)
-- \`(r1, r2) => !_.isEqual(r1, r2)\` (deep equality with lodash)
+Para fornecer dados para uma \`ListView\`, você pode criar uma nova fonte com \`new ListView.DataSource(options)\`, onde  \`options\` deve ser um objeto com a função \`rowHasChanged\` definida.  \`rowHasChanged\` compara dados das linhas para que apenas linhas que foram efetivamente alteradas sejam renderizadas. Dependendo dos tipos de dados que você estiver renderizando, uma função \`rowHasChanged\` pode ser assim:
 
-After instantiation, you must call \`DataSource.cloneWithRows(inputArray)\` with your array of row data. We'll then pass the return value of the \`cloneWithRows()\` call to the \`dataSource\` prop of the \`ListView\`. Since we only want to call \`cloneWithRows()\` on initialization or when data changes (it's slow, so we shouldn't call it in render), we often store this value in the component's \`state\`, and call e.g. \`${`this.setState({dataSource: this.state.dataSource.cloneWithRows(newData)})`}\` when we need to update the dataSource.
+- \`(r1, r2) => r1 !== r2\` (comparação de identidade)
+- \`(r1, r2) => r1.id !== r2.id\` (comparação de um campo específico)
+- \`(r1, r2) => !_.isEqual(r1, r2)\` (igualdade profunda com lodash)
 
-We'll look at two examples: one basic example, and then a more complex example which also renders section headers.
+Após instanciação, você deve chamar \`DataSource.cloneWithRows(inputArray)\` com seu array de dados de linha. Nós passaremos então o valor de retorno da chamada a \`cloneWithRows()\` para a prop \`dataSource\` da \`ListView\`. Uma vez que nós apenas queremos chamar \`cloneWithRows()\` na inicialização ou quando dados forem alterados (é lento, então não devemos chamá-la em render), nós frequentemente guardamos este valor no \`state\` do componente, e chamamos, por exemplo \`${`this.setState({dataSource: this.state.dataSource.cloneWithRows(newData)})`}\` quando precisamos atualizar o datasource.
 
-# Basic Example
+Vamos olhar dois exemplos: um básico, e então um mais complexo que também renderiza cabeçalhos de seção.
+
+# Exemplo Básico
 
 ${<WebPlayer code={code} />}
 
-# Sections Example
+# Exemplo com Seções
 
-\`ListView\`s may also render section headers. On iOS, these headers can be sticky.
+\`ListView\`s pode também renderizar cabeçalhos de seção. No iOS, estes cabeçalhos podem ser fixos.
 
-To render section headers, you'll need to:
+Para renderizar cabeçalhos de seção, você precisará:
 
-- Format your data as an object, where keys are section names and values are row data, \`${`{firstSection: [rowData1, rowData2, ...], ...}`}\`
-- Create a \`sectionHeaderHasChanged = (s1, s2) => bool\` function and pass it to your \`DataSource\` upon instantiation
-- Use \`ds.cloneWithRowsAndSections(rows)\` on your \`DataSource\` instance
-- Pass a \`renderSectionHeader\` prop, \`(rows, sectionId) => Element\`, to the \`ListView\`
+- Formatar seus dados como um objeito, onde chaves são nomes das seções e valores os dados das linhas,  \`${`{firstSection: [rowData1, rowData2, ...], ...}`}\`
+- Criar uma função \`sectionHeaderHasChanged = (s1, s2) => bool\` e passá-la para seu \`DataSource\` na instaciação
+- Usar \`ds.cloneWithRowsAndSections(rows)\` na sua instância de \`DataSource\`
+- Passar uma prop  \`renderSectionHeader\`, \`(rows, sectionId) => Element\`,  para a \`ListView\`
 
 ${<WebPlayer code={sectionsExample} />}
 `

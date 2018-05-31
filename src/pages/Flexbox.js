@@ -146,17 +146,17 @@ const files = [
 ]
 
 const content = markdown(markdownOptions)`
-Components specify the layout of their children using the <b>flexbox</b> algorithm. Using flexbox lets you specify a layout that expands or shrinks to fill screens of various dimensions. You can seamlessly mix and match these automatic layouts with fixed sizes like <code>width: 100</code>.
+Componentes especificam o layout de seus filhos usando o algoritmo  <b>flexbox</b>. Usar flexbox permite que você especifique um layout que expanda ou encolha para preencher telas de várias dimensões. Você pode facilmente misturar e combinar estes layouts automáticos com tamanhos fixos como <code>width: 100</code>.
 
-To choose the right layout for a component's children, you must make 3 choices:
+Para escolher o layout correto para um componente filho, você deve fazer 3 escolhas:
 
-Property | Default | Options | Description
+Propriedade | Valor padrão | Opções | Descrição
 ---      | ---     | ---     | ---
-\`flexDirection\` | \`column\` | \`row, column\` | Do you want a vertical (\`column\`) or horizontal (\`row\`) layout? This choice determines the orientation of the **primary axis** of your layout.
-\`justifyContent\` | \`flex-start\` | \`flex-start, center, flex-end, space-around, space-between\` | How should the content be distributed along the <b>primary axis</b> of your layout? Should it be at the start, the center, the end, or spaced evenly?
-\`alignItems\` | \`stretch\` | \`flex-start, center, flex-end, stretch\` | How should the content be aligned along the <b>secondary axis</b> of your layout? (If the primary axis is \`row\`, then the secondary axis is \`column\`, and vice versa) Should content be aligned at the start, the center, the end, or stretched to fill?
+\`flexDirection\` | \`column\` | \`row, column\` | Você quer um layout vertical (\`column\`) ou horizontal (\`row\`) ? Essa escolha determina a orientação do **eixo primário** do seu layout.
+\`justifyContent\` | \`flex-start\` | \`flex-start, center, flex-end, space-around, space-between\` | Como o conteúdo deve ser distribuído ao longo do <b>eixo primário</b> do seu layout? Ele deve estar no começo (start), no centro (center), ou igualmente espaçado?
+\`alignItems\` | \`stretch\` | \`flex-start, center, flex-end, stretch\` | Como o conteúdo deve estar alinhado ao longo do <b>eixo secundário</b>  do seu layout? (Se o eixo primário for \`row\`, então o eixo secundário será \`column\`, e vice versa). O conteúdo deve estar alinhado no começo, no centro, no final, ou esticado para preencher o espaço?
 
-The following example lets you try all the possible combinations of flexbox properties and layouts.
+O exemplo a seguir deixa você testar todas as possíveis combinações de propriedades flexbox e layouts.
 
 ${<WebPlayer files={files} />}
 `

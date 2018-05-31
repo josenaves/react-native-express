@@ -28,7 +28,7 @@ let sections = [
   {depth: 1, title: 'Component API', slug: 'component_api', componentName: 'ComponentAPI'},
   {depth: 1, title: 'Lifecycle API', slug: 'lifecycle_api', componentName: 'LifecycleAPI'},
 
-  {depth: 0, title: 'Core Components', slug: 'core_components', componentName: 'CoreComponents'},
+  {depth: 0, title: 'Componentes Base', slug: 'core_components', componentName: 'CoreComponents'},
   {depth: 1, title: 'View', slug: 'view', componentName: 'View'},
   {depth: 1, title: 'Flexbox', slug: 'flexbox', componentName: 'Flexbox'},
   {depth: 1, title: 'Text', slug: 'text', componentName: 'Text'},

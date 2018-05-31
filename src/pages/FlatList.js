@@ -6,11 +6,11 @@ import DefaultPage from './DefaultPage'
 import { WebPlayer, SnackPlayer } from '../components'
 
 const content = markdown(markdownOptions)`
-\`FlatList\`s are used for large quantities of scrollable content. They expose the underlying \`ScrollView\`, but add performance improvements: only rendering the content on screen (clipping offscreen content), and only updating rows that have changed. Like \`ScrollView\`s, they can scroll horizontally or vertically.
+\`FlatList\`s são usadas para quantidades grandes de conteúdo rolável. Elas expõem o \`ScrollView\` usado por baixo, mas com melhorias de performance: apenas renderizam o conteúdo na tela (desprezando o conteúdo fora da tela), e apenas atualizam linhas que mudaram. Assim como  \`ScrollView\`s, elas podem rolar horizontal ou verticalmente.
 
-Instead of rendering their \`children\` prop, \`FlatList\`s render each item in their input \`data\` using the \`renderItem\` prop. The \`renderItem\` prop is a function which takes an item from the \`data\` array and maps it to a React Element. Each item in \`data\` should be an object with a unique id, so that React can determine when items are rearranged. The unique id is looked up as \`item.key\` by default, but you can specify another way to find/build a the id by passing a \`keyExtractor\` function prop.
+Ao invés de renderizar suas props filhas, \`FlatList\`s renderizam cada um dos itens usando a prop  \`renderItem\`. A prop  \`renderItem\` é uma função que usa um item do array \`data\` e mapeia-o para um elemento React. Cada item em  \`data\` deve ser um objeto com um id único, para que React possa determinar quais itens foram rearranjados. O id único é buscado em  \`item.key\` por default, mas você pode especificar um outro jeito de encontrar/construir um id informando uma prop \`keyExtractor\`.
 
-# Basic Example
+ # Exemplo básico
 ${<SnackPlayer id="SyKH_IDeZ" />}
 
 `

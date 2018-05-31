@@ -50,7 +50,7 @@ AppRegistry.registerComponent('App', () => App)
 `
 
 const content = markdown(markdownOptions)`
-\`ScrollView\`s are used for scrollable content. They're well suited for scrolling small quantities of content (< 30 items). They can scroll horizontally or vertically. For large quantities of items, consider using a \`ListView\` for better performance.
+\`ScrollView\`s são usados para conteúdo **rolável**. Eles são bons para rolar pequenas quantidades de conteúdo (< 30 itens). Eles podem rolar horizontalmente ou verticalmente. Para quantidades grandes de itens, considere usar uma \`ListView\` para melhor performance.
 
 ${<WebPlayer code={code} />}
 `
